@@ -6,5 +6,6 @@
         <page name='renderer'/>
         <page name='save image'/>
         <page name='image render'/>
+        <page name='uirender'/>
     </pages>
 </playground>

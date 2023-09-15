@@ -12,7 +12,7 @@ func imageFor(_ str: String) -> UIImage {
 }
 
 // profile image
-let u1 = "https://lh3.googleusercontent.com/a/AEdFTp6gdANzhWmT2dZ69WP2UB5edH-_ZitKIkD0Cwks=s80"
+let u1 = "https://lh3.googleusercontent.com/a/AEdFTp6gdANzhWmT2dZ69WP2UB5edH-_ZitKIkD0Cwks=s280"
 imageFor(u1)
 
 // itp staff
