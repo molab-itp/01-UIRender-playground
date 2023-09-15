@@ -20,13 +20,10 @@ let image = renderer.image { context in
     UIColor.darkGray.setStroke()
     context.stroke(renderer.format.bounds)
     
-    var rt = renderer.format.bounds
-    rt = rt.insetBy(dx: 4, dy: 4)
-    context.stroke(rt)
-
-    for _ in 1...3 {
-        rt = rt.insetBy(dx: 4, dy: 4)
-        context.stroke(rt)
+    var box = renderer.format.bounds
+    for _ in 1...4 {
+        box = box.insetBy(dx: 4, dy: 4)
+        context.stroke(box)
     }
 //    UIColor(red: 158/255, green: 215/255, blue: 245/255, alpha: 1).setFill()
     
