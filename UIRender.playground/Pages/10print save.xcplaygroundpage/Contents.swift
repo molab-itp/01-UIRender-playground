@@ -6,8 +6,8 @@ import UIKit
 
 let dim = 1024.0
 let backLevel = 0.0
-let lineLen = 1 / 20.0
-let strokeLen = 4 / 20.0
+let lineLen = 1 / 10.0
+let strokeLen = 4 / 10.0
 
 let renderer = UIGraphicsImageRenderer(size: CGSize(width: dim, height: dim))
 
@@ -48,10 +48,13 @@ image
 let data = image.pngData()
 
 let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+// Output path for the file in the Documents folder
 let filePath = folder!.appendingPathComponent("10print.png");
 
 let err: ()? = try? data?.write(to: filePath)
 print("err \(String(describing: err))\nfilePath \(filePath)")
+// Terminal command string to copy output file to Downloads folder
+print("cp \(filePath.absoluteString.dropFirst(7)) ~/Downloads/10print.png" )
 
 // cp --filePath-- ~/Downloads/.
 

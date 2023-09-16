@@ -4,15 +4,19 @@
 import UIKit
 
 
-let image = UIImage(systemName: "trash.circle.fill")!
+//let image = UIImage(systemName: "rectangle.fill")!
+let image = UIImage(systemName: "rectangle")!
 
 let data = image.pngData()
 
 let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
-let filePath = folder!.appendingPathComponent("trash2.png");
+// Output path for the file in the Documents folder
+let filePath = folder!.appendingPathComponent("symbol1.png");
 
 let err: ()? = try? data?.write(to: filePath)
-print("err \(String(describing: err))\nfilePath \(filePath)")
+print("err \(String(describing: err))\nfilePath \(filePath.absoluteString.dropFirst(7))")
+// Terminal command string to copy output file to Downloads folder
+print("cp \(filePath.absoluteString.dropFirst(7)) ~/Downloads/symbol1.png" )
 
 // The file name begins with file://
 // the path follows this prefix
