@@ -1,5 +1,6 @@
 
-// drawing colored shapes
+// drawing colored shapes using UIGraphicsImageRenderer
+// https://developer.apple.com/documentation/uikit/uigraphicsimagerenderer
 
 import UIKit
 
@@ -25,8 +26,7 @@ let image = renderer.image { context in
         box = box.insetBy(dx: 4, dy: 4)
         context.stroke(box)
     }
-//    UIColor(red: 158/255, green: 215/255, blue: 245/255, alpha: 1).setFill()
-    
+    // UIColor(red: 158/255, green: 215/255, blue: 245/255, alpha: 1).setFill()
 }
 
 image

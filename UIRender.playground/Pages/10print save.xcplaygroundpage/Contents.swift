@@ -1,6 +1,8 @@
 
 // Draw 10print style maze using UIGraphic and CGContext drawPath
 // Write created image to local file
+// https://developer.apple.com/documentation/coregraphics/cgcontext
+//
 
 import UIKit
 
