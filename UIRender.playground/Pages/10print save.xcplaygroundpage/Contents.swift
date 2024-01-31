@@ -58,5 +58,6 @@ print("err \(String(describing: err))\nfilePath \(filePath)")
 // Terminal command string to copy output file to Downloads folder
 print("cp \(filePath.absoluteString.dropFirst(7)) ~/Downloads/10print.png" )
 
+// Terminal command to copy the image file to the downloads folder
 // cp --filePath-- ~/Downloads/.
 
