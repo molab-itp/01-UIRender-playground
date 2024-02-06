@@ -47,17 +47,19 @@ var image = renderer.image { (context) in
 
 image
 
+// get the bag of bits that represent the image as a png file
 let data = image.pngData()
 
 let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+
 // Output path for the file in the Documents folder
-let filePath = folder!.appendingPathComponent("10print.png");
+// Use a different file name here to have file appear as most recently added
+let filePath = folder!.appendingPathComponent("10print2024.png");
 
 let err: ()? = try? data?.write(to: filePath)
 print("err \(String(describing: err))\nfilePath \(filePath)")
-// Terminal command string to copy output file to Downloads folder
-print("cp \(filePath.absoluteString.dropFirst(7)) ~/Downloads/10print.png" )
 
-// Terminal command to copy the image file to the downloads folder
-// cp --filePath-- ~/Downloads/.
+// Terminal command 'cp' to copy output file to Downloads folder
+// The trailing period means use the same file name as the source
+print("cp \(filePath.absoluteString.dropFirst(7)) ~/Downloads/." )
 
