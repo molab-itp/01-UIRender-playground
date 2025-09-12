@@ -1,6 +1,7 @@
 
 // drawing colored shapes using UIGraphicsImageRenderer
 // https://developer.apple.com/documentation/uikit/uigraphicsimagerenderer
+// https://developer.apple.com/documentation/uikit/uigraphicsrenderercontext
 
 import UIKit
 
