@@ -56,7 +56,7 @@ let folder = FileManager.default.urls(for: .documentDirectory, in: .userDomainMa
 // Use a different file name here to have file appear as most recently added
 let filePath = folder!.appendingPathComponent("10print2026-09.png");
 
-let err: ()? = try? data?.write(to: filePath)
+let err: ()?  = try? data?.write(to: filePath)
 print("err \(String(describing: err))\nfilePath \(filePath)")
 
 // Terminal command 'cp' to copy output file to Downloads folder
